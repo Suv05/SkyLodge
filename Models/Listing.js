@@ -14,9 +14,11 @@ const ListingSchema = new Schema({
   //trying to show a default image to user
   image: {
     type: String,
+    default:'https://img.freepik.com/free-photo/modern-residential-district-with-green-roof-balcony-generated-by-ai_188544-10276.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1700352000&semt=ais',
+    //if user don't have any image then this should work
     set:function(value){
         if(value===""){
-            return './img/todd-kent-178j8tJrNlc-unsplash.jpg' || value
+            return 'https://img.freepik.com/free-photo/modern-residential-district-with-green-roof-balcony-generated-by-ai_188544-10276.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1700352000&semt=ais' || value
         }
     }
   },

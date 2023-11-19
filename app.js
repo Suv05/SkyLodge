@@ -1,3 +1,7 @@
+//import listing module
+const Listing=require('./Models/Listing')
+
+
 //Express intialization
 const express =require('express');
 //mongoose intialzation
@@ -15,6 +19,19 @@ app.get('/',(req,res)=>{
     res.sendStatus(200);
 })
 
+app.get('/testlisting',async(req,res)=>{
+    const samplelisting=new Listing({
+        title:"Ladvore House La dehi",
+        description:"You wont regereat here",
+        price:255,
+        country:"india",
+        location:"bhubaneswar"
+    })
+
+    await samplelisting.save();
+    console.log("Susecfuly save to db");
+    res.send("Done")
+})
 
 
 
