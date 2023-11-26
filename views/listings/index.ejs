@@ -11,7 +11,7 @@
     <h1>All listing</h1>
     <ul>
         <% allListing.forEach((lists)=>{ %>
-           <li><a href="<%= lists._id %>"> <%= lists.title %> </a></li> 
+           <li><a href="/listings/<%= lists._id %>"> <%= lists.title %> </a></li> 
            <% }) %>
     </ul>
 </body>
