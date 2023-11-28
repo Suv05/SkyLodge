@@ -9,10 +9,19 @@
 
 <body>
     <h1>All listing</h1>
+    <form action="listings/new" method="get">
+        <button>
+            Create new Listing
+        </button>
+    </form>
+
+
     <ul>
         <% allListing.forEach((lists)=>{ %>
-           <li><a href="/listings/<%= lists._id %>"> <%= lists.title %> </a></li> 
-           <% }) %>
+            <li><a href="/listings/<%= lists._id %>">
+                    <%= lists.title %>
+                </a></li>
+            <% }) %>
     </ul>
 </body>
 
