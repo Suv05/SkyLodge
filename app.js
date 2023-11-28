@@ -26,11 +26,26 @@ app.get("/listings", async (req, res) => {
   res.render("listings/index.ejs", { allListing });
 });
 
-app.get("/listings/:id",async(req, res) => {
-  let {id} = req.params;
-  const lists= await Listing.findById(id);
-  res.render('listings/show.ejs',{lists});
+//create new listing get route
+app.get("/listings/new", (req, res) => {
+  res.render("listings/new");
+});
 
+//Show route
+app.get("/listings/:id", async (req, res) => {
+  let { id } = req.params;
+  const lists = await Listing.findById(id);
+  res.render("listings/show.ejs", { lists });
+});
+
+//post new listing to /listings route from /listings/new route
+app.post("/listings", (req, res) => {
+  const list= new Listing(req.body.listing);
+  list.save();
+
+  res.redirect('/listings');
+  
+  
 });
 
 app.listen("3000", () => {
