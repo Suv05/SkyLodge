@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Wander-Lust</title>
+</head>
+
+<body>
+    <h3>Create New Listings</h3>
+    <form action="/listings" method="post">
+        <label for="title">Title:</label>
+        <input type="text" name="listing[title]" id="title" required>
+
+        <br>
+
+
+        <label for="description">Description</label>
+        <textarea name="listing[description]" id="description" cols="18" rows="7"></textarea>
+
+        <br>
+
+
+        <label for="img"></label><label for="image">Upload Image:</label>
+        <input type="file" id="image" name="listing[image]" accept="image/*">
+
+        <br>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="listing[price]" required>
+        <!-- min="0" ensures that the price cannot be negative, step="0.01" allows decimals -->
+
+        <br>
+
+        <label for="location">Location:</label>
+        <input type="text" name="listing[location]" id="location">
+
+        <br>
+
+        <label for="country">Country:</label>
+        <input type="text" name="listing[country]" id="country">
+
+        <br>
+
+        <button type="submit">+</button>
+
+
+    </form>
+
+</body>
+
+</html>
