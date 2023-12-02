@@ -31,6 +31,13 @@ app.get("/listings/new", (req, res) => {
   res.render("listings/new");
 });
 
+app.get("/listings/:id/edit",async(req,res)=>{
+  let { id } = req.params;
+  const lists = await Listing.findById(id);
+
+  res.render("listings/edit.ejs",{lists});
+})
+
 //Show route
 app.get("/listings/:id", async (req, res) => {
   let { id } = req.params;
@@ -40,30 +47,14 @@ app.get("/listings/:id", async (req, res) => {
 
 //post new listing to /listings route from /listings/new route
 app.post("/listings", (req, res) => {
-  const list= new Listing(req.body.listing);
-  list.save().then(()=>{
+  const list = new Listing(req.body.listing);
+  list.save().then(() => {
     console.log("sucessfuly saved");
-  })
+  });
 
-  res.redirect('/listings');
-  
-  
+  res.redirect("/listings");
 });
 
 app.listen("3000", () => {
   console.log("App is running at the port 3000");
 });
-
-// app.get('/testlisting',async(req,res)=>{
-//     const samplelisting=new Listing({
-//         title:"Ladvore House La dehi",
-//         description:"You wont regereat here",
-//         price:255,
-//         country:"india",
-//         location:"bhubaneswar"
-//     })
-
-//     await samplelisting.save();
-//     console.log("Susecfuly save to db");
-//     res.send("Done")
-// })
