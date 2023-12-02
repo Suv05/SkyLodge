@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wonder Lust</title>
+    <title>Sky-Lodge</title>
 </head>
 <body>
     <h3>Listing Details</h3>
     <ul>
         <li><%= lists.title %></li>
         <li><%= lists.description %></li>
+        <li><%= lists.image %></li>
         <li>&#8377;<%= lists.price.toLocaleString("en-IN") %></li>
         <li><%= lists.location %></li>
         <li><%= lists.country %></li>
-        
+    
     </ul>
+
+    <a href="/listings/<%= lists._id %>/edit">Edit the Listing</a>
 </body>
 </html>

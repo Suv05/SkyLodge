@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky-Lodge</title>
+</head>
+<body>
+    <h3>Edit the listing Here</h3>
+
+    <form>
+       
+        <input type="text" value="<%=lists.title%> " name="listing[title]" id="title" required>
+
+        <br>
+
+
+        <textarea value="<%=lists.description%> " name="listing[description]" id="description" cols="18" rows="7"></textarea>
+
+        <br>
+
+
+        <input type="text" value="<%=lists.image%>" id="image" name="listing[image]" accept="image/*">
+
+        <br>
+        
+        <input type="number" value="<%=lists.price%>" id="price" name="listing[price]">
+        <!-- min="0" ensures that the price cannot be negative, step="0.01" allows decimals -->
+
+        <br>
+
+        <input type="text" value="<%=lists.location%> " name="listing[location]" id="location">
+
+        <br>
+
+        <input type="text" value="<%=lists.country%> " name="listing[country]" id="country">
+
+        <br>
+
+        <button type="submit">+</button>
+
+
+    </form>
+</body>
+</html>
