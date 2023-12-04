@@ -13,8 +13,11 @@ const ListingSchema = new Schema({
   description: String,
   //trying to show a default image to user
   image: {
-    type: String,
-    
+    filename: String,
+    url: {
+      type: String,
+      default: 'https://via.placeholder.com/300',
+    },
   },
   price: Number,
   location: String,
