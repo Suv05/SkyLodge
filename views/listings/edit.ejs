@@ -8,14 +8,14 @@
 <body>
     <h3>Edit the listing Here</h3>
 
-    <form>
+    <form method="post" action="listings/<%= lists._id %>?_method=PUT">
        
         <input type="text" value="<%=lists.title%> " name="listing[title]" id="title" required>
 
         <br>
 
 
-        <textarea value="<%=lists.description%> " name="listing[description]" id="description" cols="18" rows="7"></textarea>
+        <textarea name="listing[description]" id="description" cols="18" rows="7"><%=lists.description%></textarea>
 
         <br>
 
