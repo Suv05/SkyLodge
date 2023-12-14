@@ -8,7 +8,8 @@
 <body>
     <h3>Edit the listing Here</h3>
 
-    <form method="post" action="listings/<%= lists._id %>?_method=PUT">
+    <form method="post" action="/listings/<%= lists._id %>?_method=PUT">
+
        
         <input type="text" value="<%=lists.title%> " name="listing[title]" id="title" required>
 
