@@ -13,6 +13,8 @@ const ejs = require("ejs");
 const path = require("path");
 //method override
 const methodOverride = require("method-override");
+//requiring ejs-mate
+const engine = require('ejs-mate')
 
 //setting the app to express
 const app = express();
@@ -21,6 +23,9 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 // Use method-override middleware
 app.use(methodOverride("_method"));
+
+//using ejs mate
+app.engine('ejs', engine);
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
