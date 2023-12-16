@@ -1,3 +1,37 @@
-body{
-    background-color: cyan;
+/* Colors :⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣
+D8B188 • 2F5663 • C18653 • 383B38 */
+body {
+  background-color: rgb(216, 228, 228);
+}
+
+/* ======Navbar====== */
+.navbar {
+  height: 4.5rem;
+}
+.fa-dice-d20 {
+  color: #f64c72;
+}
+.nav-item .nav-link {
+  color: #fc4445;
+}
+
+/* ======footer====== */
+footer {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-top: 0.8px;
+  border-top: 1px solid #869086;
+  display: flex;
+}
+
+.f-links a,
+.f-social a,
+.f-lang a {
+  text-decoration: none;
+  color: #383b38;
+}
+
+.f-links a:hover,
+.f-lang a:hover {
+  text-decoration: underline;
 }
