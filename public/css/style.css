@@ -1,7 +1,12 @@
 /* Colors :⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣⁣
 D8B188 • 2F5663 • C18653 • 383B38 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: rgb(216, 228, 228);
+  font-family: 'PT Sans', sans-serif;
 }
 
 /* ======Navbar====== */
@@ -21,7 +26,8 @@ footer {
   padding-bottom: 24px;
   margin-top: 0.8px;
   border-top: 1px solid #869086;
-  display: flex;
+  margin: auto;
+  text-align: center;
 }
 
 .f-links a,
@@ -34,4 +40,28 @@ footer {
 .f-links a:hover,
 .f-lang a:hover {
   text-decoration: underline;
+}
+
+.fa-brands {
+  width: 2.5rem;
+  font-size: 21px;
+}
+
+.fa-globe {
+  padding-right: 0.6rem;
+}
+
+/* ========cards at listing page========== */
+.card {
+  border: none !important;
+  margin-bottom: 2.3rem;
+  
+}
+.card-img-top {
+  border-radius: 1rem !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+.card-text{
+  font-weight: 400 !important;
 }
