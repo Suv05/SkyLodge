@@ -1,20 +1,33 @@
 <% layout('/layouts/boilerplate') -%>
 
-<body>
-    <h1>All listing</h1>
-    <form action="listings/new" method="get">
-        <button>
-            Create new Listing
-        </button>
-    </form>
+    <body>
 
+        <div class="row" style="justify-content: center;">
 
-    <ul>
-        <% allListing.forEach((lists)=>{ %>
-            <li><a href="/listings/<%= lists._id %>">
-                    <%= lists.title %>
-                </a></li>
-            <% }) %>
-    </ul>
-</body>
+            <% allListing.forEach((lists)=>{ %>
+                <div class="card col-lg-3 col-md-6 col-sm-12">
+                    <a href="/listings/<%= lists._id %>">
+                        <img src="<%= lists.image.url %>" class="card-img-top" alt="..." style="height: 16rem"
+                            style="width:auto;">
+                    </a>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>
+                                <%= lists.title %> <br>
+                                    &#8377;<%= lists.price.toLocaleString("en-IN") %>
+                            </b>/night
+                        </p>
+                    </div>
+                </div>
+                <% }) %>
 
+        </div>
+        <!-- Create new listings -->
+        <center>
+            <form action="listings/new" method="get">
+                <button>
+                    Create new Listing
+                </button>
+            </form>
+        </center>
+    </body>
