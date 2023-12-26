@@ -7,6 +7,9 @@ D8B188 • 2F5663 • C18653 • 383B38 */
 
 body {
   font-family: 'PT Sans', sans-serif;
+  /* display: flex;
+  flex-direction: column;
+  min-height: 100vh; */
 }
 
 /* ======Navbar====== */
@@ -20,6 +23,10 @@ body {
   color: #fc4445;
 }
 
+.navbar-brand{
+  color: #f64c72;
+}
+
 /* ======footer====== */
 footer {
   padding-top: 24px;
@@ -28,6 +35,7 @@ footer {
   border-top: 1px solid #869086;
   margin: auto;
   text-align: center;
+  background-color: #D8B188;
 }
 
 .f-links a,
@@ -62,6 +70,25 @@ footer {
   width: 100% !important;
   object-fit: cover !important;
 }
+.card-img-top:hover{
+  opacity:0.8;
+  background-color: rgb(90, 90, 89);
+}
 .card-text{
   font-weight: 400 !important;
+}
+
+/* add new styling page */
+.add-btn{
+  width: 5rem;
+  border: none !important;
+}
+
+/* show-page styling */
+.show-img{
+height: 20rem !important;
+width: 40vh !important;
+}
+.card-body{
+  padding-left: 1rem;
 }
