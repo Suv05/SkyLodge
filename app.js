@@ -83,6 +83,10 @@ app.delete('/listings/:id',async(req,res)=>{
 
 })
 
+//handeling error by defining middleware
+app.use((err,req,res,next)=>{
+  res.send("something went worng")
+})
 app.listen("3000", () => {
   console.log("App is running at the port 3000");
 });
